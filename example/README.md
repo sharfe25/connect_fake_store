@@ -1,16 +1,56 @@
-# example
+# Example for Connect Fake Store Package
 
-A new Flutter project.
+This example demonstrates how to use the connect_fake_store package to interact with a mock store's API to fetch categories and products.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+The example consists of:
 
-A few resources to get you started if this is your first Flutter project:
+- main.dart: Entry point of the Flutter application where MyApp and MyHomePage widgets are defined.
+- home_page.dart: Displays options to fetch categories and products using HomeProvider and Provider.
+- products_page.dart: Displays fetched products in a grid format using ProductsPage and ProductsGrid.
+- categories_page.dart: Displays fetched categories using CategoriesPage and ChipWidget.
+- main_provider.dart: Implements HomeProvider to manage state and fetch data using ConnectFakeStore.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to Run
+
+Follow these steps to run the example:
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/sharfe25/connect_fake_store.git
+```
+
+2. Navigate to the example directory:
+
+```bash
+cd connect_fake_store/example
+```
+
+3. Install dependencies:
+
+```bash
+flutter pub get
+```
+
+4. Run the example on a connected device or emulator:
+```bash
+flutter run
+```
+
+5. Explore the example:
+
+- The home page (HomePage) displays options to fetch categories and products.
+- Tap on "Categories" or "Products" to fetch and display corresponding data.
+- The fetched categories are displayed in CategoriesPage, and products are displayed in ProductsPage.
+
+## Screenshots
+![Preview](home.png)
+![Preview](categories.png)
+![Preview](products.png)
+
+## License
+This example is licensed under the MIT License. See the [LICENSE] (https://choosealicense.com/licenses/mit/) file for more details.
+

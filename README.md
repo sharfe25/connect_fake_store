@@ -98,3 +98,5 @@ void fetchCategories() async {
 ## Documentation
 - For more detailed examples and documentation, check out the [GitHub repository](https://github.com/sharfe25/connect_fake_store).
 
+## License
+This package is licensed under the MIT License. See the [LICENSE] (https://choosealicense.com/licenses/mit/) file for more details.
