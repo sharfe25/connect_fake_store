@@ -40,18 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-            create: (_) =>
-                HomeProvider()),
+        ChangeNotifierProvider(create: (_) => MainProvider()),
       ],
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: const Center(
-          child: HomePage()
-        ),
+        body: const Center(child: HomePage()),
       ),
     );
   }

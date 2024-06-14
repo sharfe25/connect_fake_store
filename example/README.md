@@ -8,8 +8,8 @@ The example consists of:
 
 - main.dart: Entry point of the Flutter application where MyApp and MyHomePage widgets are defined.
 - home_page.dart: Displays options to fetch categories and products using HomeProvider and Provider.
-- products_page.dart: Displays fetched products in a grid format using ProductsPage and ProductsGrid.
-- categories_page.dart: Displays fetched categories using CategoriesPage and ChipWidget.
+- products_page.dart: Displays fetched products in  ProductsPage.
+- categories_page.dart: Displays fetched categories using CategoriesPage.
 - main_provider.dart: Implements HomeProvider to manage state and fetch data using ConnectFakeStore.
 
 

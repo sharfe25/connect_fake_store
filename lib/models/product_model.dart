@@ -71,6 +71,6 @@ class ProductModel {
   /// Returns a string representation of the [ProductModel] instance.
   @override
   String toString() {
-    return 'Product(id: $id, name: $title, price: $price)';
+    return 'Product(\n id: $id, \n name: $title, \n price: $price \n)';
   }
 }

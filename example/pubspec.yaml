@@ -38,6 +38,7 @@ dependencies:
     path: ../
   flutter_spinkit: ^5.2.1
   provider: ^6.1.2
+  flutter_highlight: ^0.7.0
 
 dev_dependencies:
   flutter_test:

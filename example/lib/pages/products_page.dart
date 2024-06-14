@@ -1,11 +1,10 @@
-import 'package:connect_fake_store/models/product_model.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/products_grid_widget.dart';
+import '../providers/main_provider.dart';
 
 class ProductsPage extends StatelessWidget {
-  final List<ProductModel> products;
-  const ProductsPage({Key? key, required this.products}) : super(key: key);
+  final MainProvider provider;
+  const ProductsPage({Key? key, required this.provider}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +20,8 @@ class ProductsPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: SingleChildScrollView(
-          child: ProductsGrid(
-            title: '',
-            // Retrieve products using the product provider
-            products: products,
+          child: Text(
+            provider.allProducts,
           ),
         ),
       ),

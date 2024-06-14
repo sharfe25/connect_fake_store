@@ -10,8 +10,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeProvider homeProvider =
-        Provider.of<HomeProvider>(context, listen: true);
+    MainProvider homeProvider =
+        Provider.of<MainProvider>(context, listen: true);
     return homeProvider.isLoading
         ? const LoaderWidget()
         : Padding(
