@@ -1,4 +1,5 @@
-import '../.env/api_env.dart';
+
+import '../env/api_env.dart';
 
 /// A utility class for constructing API paths.
 class ApiPaths {
