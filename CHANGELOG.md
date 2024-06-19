@@ -4,3 +4,7 @@
 - Implemented HTTP adapters for fetching data from a mock store API.
 - Included models for representing product and category data structures.
 
+## 0.0.2
+
+- Fixed functions.
+

@@ -56,20 +56,14 @@ class ProductController {
   /// code to the console.
   ///
   /// The [category] parameter specifies the category to filter products by.
-  /// The [context] parameter is used for navigation.
   Future<void> getProductsByCategory({
     required String category,
-    required BuildContext context,
   }) async {
     _titleProductsByCategory = category;
     final Either<List<ProductModel>, int> result =
         await _productService.getProductsByCategory(category: category);
     result.when((List<ProductModel> left) {
       _productsByCategory = left;
-      Navigator.pushNamed(
-        context,
-        '/products_by_category',
-      );
     }, (int right) async {
       _products = [];
     });

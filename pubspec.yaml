@@ -1,6 +1,6 @@
 name: connect_fake_store
 description: A Dart package providing controllers and services for interacting with a mock store's products and categories through an API.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/sharfe25/connect_fake_store
 
 environment:
