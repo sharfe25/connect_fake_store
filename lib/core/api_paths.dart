@@ -1,4 +1,3 @@
-
 import '../env/api_env.dart';
 
 /// A utility class for constructing API paths.
@@ -20,7 +19,7 @@ class ApiPaths {
   ///
   /// Returns the complete URL as a string.
   static String createUrl({required String path, String pathVariables = ''}) {
-    String baseUrl = ApiEnv.apiUrl;
+    String baseUrl = apiEnv.apiUrl;
     return '$baseUrl$path$pathVariables';
   }
 }

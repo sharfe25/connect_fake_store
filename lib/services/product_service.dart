@@ -5,12 +5,15 @@ import '../core/http_adapter.dart';
 import '../models/product_model.dart';
 
 class ProductService {
+  final HTTPAdapter httpAdapter;
+  ProductService({required this.httpAdapter});
+
   Future<Either<List<ProductModel>, int>> getAllProducts() async {
     final dynamic serviceUrl = ApiPaths.createUrl(
       path: ApiPaths.products,
     );
     final Either<List<dynamic>?, int> result =
-        await HTTPAdapter.get<List<dynamic>?>(
+        await httpAdapter.get<List<dynamic>?>(
       url: serviceUrl,
     );
 
@@ -38,7 +41,7 @@ class ProductService {
     final dynamic serviceUrl = ApiPaths.createUrl(
         path: ApiPaths.productsByCategory, pathVariables: category);
     final Either<List<dynamic>?, int> result =
-        await HTTPAdapter.get<List<dynamic>?>(
+        await httpAdapter.get<List<dynamic>?>(
       url: serviceUrl,
     );
 

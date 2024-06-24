@@ -12,3 +12,11 @@
 
 - Fixed functions.
 
+## 0.0.4
+
+- Fixed bugs.
+
+
+## 0.0.5
+
+- Tests added.

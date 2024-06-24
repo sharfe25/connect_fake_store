@@ -1,17 +1,19 @@
-
 import '../core/api_paths.dart';
 import '../core/either.dart';
 import '../core/http_adapter.dart';
 import '../models/category_model.dart';
 
 class CategoryService {
+  final HTTPAdapter httpAdapter;
+
+  CategoryService({required this.httpAdapter});
+
   Future<Either<List<CategoryModel>, int>> getAllCategories() async {
     final dynamic serviceUrl = ApiPaths.createUrl(
       path: ApiPaths.categories,
     );
 
-    final Either<List<dynamic>?, int> result =
-        await HTTPAdapter.get<List<dynamic>>(
+    final Either<List<dynamic>?, int> result = await httpAdapter.get<List<dynamic>>(
       url: serviceUrl,
     );
 

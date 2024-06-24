@@ -8,6 +8,9 @@ class HTTPAdapter {
   // Private constructor to prevent external instantiation.
   HTTPAdapter._();
 
+  // Optional constructor for dependency injection
+  HTTPAdapter();
+
   // The single instance of the class.
   static final HTTPAdapter _instance = HTTPAdapter._();
 
@@ -24,7 +27,7 @@ class HTTPAdapter {
   /// [url] is the endpoint URL.
   /// [queryParameters] are the query parameters for the GET request.
   /// [headers] are the headers for the GET request.
-  static Future<Either<T?, int>> get<T>({
+  Future<Either<T?, int>> get<T>({
     required String url,
     Map<String, dynamic>? queryParameters,
     Map<String, String>? headers,
@@ -43,7 +46,7 @@ class HTTPAdapter {
   /// [url] is the endpoint URL.
   /// [body] is the body of the request (for POST, PUT, etc.).
   /// [addHeaders] are additional headers for the request.
-  static Future<Either<T?, int>> dynamicRequest<T>({
+  Future<Either<T?, int>> dynamicRequest<T>({
     required String method,
     required String url,
     dynamic body,
@@ -85,8 +88,7 @@ class HTTPAdapter {
   /// Processes the HTTP response.
   ///
   /// [response] is the HTTP response.
-  static Future<Either<T?, int>> getResponse<T>(
-      HttpClientResponse response) async {
+  Future<Either<T?, int>> getResponse<T>(HttpClientResponse response) async {
     if (response.statusCode.toString().startsWith('2')) {
       final String responseBodyString =
           await response.transform(utf8.decoder).join();

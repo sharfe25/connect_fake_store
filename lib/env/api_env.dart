@@ -1,5 +1,5 @@
 import './api_env_model.dart';
 
-APIEnvModel ApiEnv = APIEnvModel(
+APIEnvModel apiEnv = APIEnvModel(
   apiUrl: 'https://fakestoreapi.com/',
 );
