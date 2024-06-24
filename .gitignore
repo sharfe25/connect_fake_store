@@ -36,7 +36,6 @@
 /dev/docs/pubspec.yaml
 /dev/integration_tests/**/xcuserdata
 /dev/integration_tests/**/Pods
-/packages/flutter/coverage/
 version
 analysis_benchmark.json
 
@@ -116,8 +115,6 @@ unlinked_spec.ds
 **/linux/flutter/generated_plugin_registrant.h
 **/linux/flutter/generated_plugins.cmake
 
-# Coverage
-coverage/
 
 # Symbols
 app.*.symbols
@@ -130,6 +127,3 @@ app.*.symbols
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
 
-
-# Reporte de testeo en Web
-/coverage/
